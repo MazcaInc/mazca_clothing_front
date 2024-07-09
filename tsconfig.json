@@ -31,7 +31,7 @@
             "@formatters/*": ["app/utils/formatters/*"],
             "@constants/*": ["app/utils/constants/*"],
             "@functions/*": ["app/utils/functions/*"],
-            "@integrations/*": ["app/integrations"],
+            "@services/*": ["app/services"],
             "@interfaces/*": ["app/integrations/interfaces"],
             "@modules/*": ["@clean/modules/*"],
             "@entities/*": ["@clean/shared/domain/entities/*"],
