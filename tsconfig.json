@@ -1,0 +1,53 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "outDir": "./dist/out-tsc",
+        "strict": true,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "declaration": false,
+        "experimentalDecorators": true,
+        "moduleResolution": "bundler",
+        "importHelpers": true,
+        "target": "ES2022",
+        "module": "ES2022",
+        "useDefineForClassFields": false,
+        "lib": ["ES2022", "dom"],
+        "baseUrl": "./src",
+        "paths": {
+            "@components/*": ["app/web/components/*"],
+            "@adapters/*": ["app/adapters/*"],
+            "@models/*": ["app/models/*"],
+            "@pages/*": ["app/web/screens/*"],
+            "@assets/*": ["app/assets/*"],
+            "@styles/*": ["app/web/styles/*"],
+            "@formatters/*": ["app/utils/formatters/*"],
+            "@constants/*": ["app/utils/constants/*"],
+            "@functions/*": ["app/utils/functions/*"],
+            "@integrations/*": ["app/integrations"],
+            "@interfaces/*": ["app/integrations/interfaces"],
+            "@modules/*": ["@clean/modules/*"],
+            "@entities/*": ["@clean/shared/domain/entities/*"],
+            "@enums/*": ["@clean/shared/domain/enums/*"],
+            "@helpers/*": ["@clean/shared/domain/helpers/*"],
+            "@axios/*": ["@clean/shared/infra/axios/*"],
+            "@containers/*": ["@clean/shared/infra/containers/*"],
+            "@jsons/*": ["@clean/shared/infra/jsons/*"],
+            "@repositories/*": ["@clean/shared/infra/repositories/*"],
+            "@@types/*": ["app/utils/@types/*"]
+        }
+    },
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    }
+}
