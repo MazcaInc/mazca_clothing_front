@@ -1,4 +1,4 @@
-import IAdress from "./IAdress";
+import IAddress from "./IAddress";
 import IBilling from "./IBilling";
 import { UserTypeEnum } from "@enums/UserTypeEnum";
 
@@ -10,6 +10,6 @@ export default interface IUser {
     phone: string;
     cpf: string;
     user_type: UserTypeEnum;
-    adress: IAdress;
+    address: IAddress;
     billing: IBilling;
 }
