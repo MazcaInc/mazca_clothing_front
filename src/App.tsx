@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
 import ToasterContainer from "@components/ToasterContainer.tsx";
 import { useThemeDetector } from "@functions/ThemeDetector.ts";
+import AppRoutes from "@routes/index";
 
 function App() {
     const isDarkTheme = useThemeDetector();
@@ -17,6 +18,7 @@ function App() {
                     | Element
                     | DocumentFragment
             )}
+            <AppRoutes></AppRoutes>
         </div>
     );
 }

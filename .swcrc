@@ -5,7 +5,7 @@
             "tsx": true,
             "dynamicImport": true
         },
-        "target": "es2022",
+        "target": "es2023",
         "transform": {
             "react": {
                 "runtime": "automatic",
@@ -16,7 +16,7 @@
         "minify": true
     },
     "module": {
-        "type": "es2022",
+        "type": "es2023",
         "lazy": true,
         "strict": true,
         "strictMode": true
