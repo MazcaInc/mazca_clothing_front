@@ -1,1 +1,1 @@
-npx pretty-quick && lint-staged
+npx lint-staged

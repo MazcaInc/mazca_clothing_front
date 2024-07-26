@@ -1,4 +1,4 @@
-import IUser from "@interfaces/IUser";
+import IUser from "mazca_front/src/app/utils/interfaces/IUser";
 import { UserTypeEnum } from "@enums/UserTypeEnum";
 import { PaymentMethodEnum } from "@enums/user/PaymentMethodEnum";
 import { BrazilianStateEnum } from "@enums/user/BrazilianStateEnum";
