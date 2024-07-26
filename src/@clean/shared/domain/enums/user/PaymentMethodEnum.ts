@@ -1,6 +1,6 @@
 export enum PaymentMethodEnum {
-    PIX,
-    BOLETO,
-    DEBIT_CARD,
-    CREDIT_CARD
+    PIX = 1,
+    BOLETO = 2,
+    DEBIT_CARD = 3,
+    CREDIT_CARD = 4
 }

@@ -7,9 +7,9 @@ export default interface IUser {
     name: string;
     email: string;
     password: string;
-    phone: string;
-    cpf: string;
+    phone?: string;
+    cpf?: string;
     user_type: UserTypeEnum;
-    address: IAddress;
-    billing: IBilling;
+    address?: IAddress[];
+    billing?: IBilling[];
 }

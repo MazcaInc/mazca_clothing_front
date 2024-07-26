@@ -9,6 +9,6 @@ export default interface IAddress {
     state: BrazilianStateEnum;
     country: CountriesEnum;
     street: string;
-    complement: string;
+    complement?: string;
     zip_code: string;
 }
