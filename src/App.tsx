@@ -18,7 +18,7 @@ function App() {
                     | Element
                     | DocumentFragment
             )}
-            <AppRoutes></AppRoutes>
+            <AppRoutes />
         </div>
     );
 }
