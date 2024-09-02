@@ -16,6 +16,19 @@ const config = {
 
     // Automatically clear mock calls, instances, contexts and results before every test
     clearMocks: true,
+    moduleNameMapper: {
+        '^@components/(.*)$': '<rootDir>/src/app/web/components/$1',
+        '^@screens/(.*)$': '<rootDir>/src/app/web/screens/$1',
+        '^@routes/(.*)$': '<rootDir>/src/app/web/routes/$1',
+        '^@assets/(.*)$': '<rootDir>/src/app/assets/$1',
+        '^@styles/(.*)$': '<rootDir>/src/app/web/styles/$1',
+        '^@constants/(.*)$': '<rootDir>/src/app/utils/constants/$1',
+        '^@integrations/(.*)$': '<rootDir>/src/@clean/integrations/modules/$1',
+        '^@enums/(.*)$': '<rootDir>/src/@clean/shared/domain/enums/$1',
+        '^@interfaces/(.*)$': '<rootDir>/src/app/utils/interfaces/$1',
+        '^@functions/(.*)$': '<rootDir>/src/app/utils/functions/$1',
+        '^@formatters/(.*)$': '<rootDir>/src/app/utils/formatters/$1',
+    },
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,

@@ -1,5 +1,12 @@
-import ProductContent from "@components/ProductContent";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "@screens/Home.tsx";
 
 export default function AppRoutes() {
-    return <ProductContent />;
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path={"/"} element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
