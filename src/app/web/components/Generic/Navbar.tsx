@@ -25,7 +25,7 @@ export default function Navbar() {
                             <button
                                 key={"Navbar button key: " + item.id}
                                 onClick={() => navigate(item.navigate)}
-                                className={`w-[134px] active:scale-95 h-12 hover:-translate-y-0.5 transform tracking-widest hover:border-8 border-4 text-lg hover:border-pink-600 transition-all duration-300 border-dashed border-white py- px-3 rounded-xl`}
+                                className={`w-36 box-border active:scale-95 h-12 tracking-widest hover:border-[5px] border-[3px] text-lg hover:border-pink-600 transition-all duration-300 border-dashed border-white py- px-3 rounded-xl`}
                             >
                                 <span className={"font-bold"}>
                                     {item.title?.charAt(0)}
