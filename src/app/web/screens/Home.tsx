@@ -1,10 +1,9 @@
-import Navbar from "@components/Generic/Navbar.tsx";
-
 export default function Home() {
     return (
         <>
-            <Navbar />
-            <h1>conteudo</h1>
+            <div className={"h-screen items-center justify-center w-full flex"}>
+                <h1>Conteudo</h1>
+            </div>
         </>
     );
 }

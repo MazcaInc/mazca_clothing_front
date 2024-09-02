@@ -1,12 +1,28 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "@screens/Home.tsx";
+import Navbar from "@components/Generic/Navbar.tsx";
+import { lazy, Suspense } from "react";
+import { LoadSpinner } from "@components/Generic/LoadSpinner.tsx";
+const Home = lazy(() => import("@screens/Home.tsx"));
 
 export default function AppRoutes() {
     return (
         <BrowserRouter>
-            <Routes>
-                <Route path={"/"} element={<Home />} />
-            </Routes>
+            <Navbar />
+            <Suspense
+                fallback={
+                    <div
+                        className={
+                            "fixed flex-col inset-0 flex items-center justify-center"
+                        }
+                    >
+                        <LoadSpinner />
+                    </div>
+                }
+            >
+                <Routes>
+                    <Route path={"/"} element={<Home />} />
+                </Routes>
+            </Suspense>
         </BrowserRouter>
     );
 }
