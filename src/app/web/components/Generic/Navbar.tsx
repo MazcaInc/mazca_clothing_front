@@ -1,47 +1,40 @@
-import { navbarProperties } from "@constants/navbar-properties.ts";
 import { useNavigate } from "react-router-dom";
+import Mazca from "@assets/logos/MAZCA SVG WHITE.svg";
+import { navbarProperties } from "@constants/navbar-properties.ts";
 
 export default function Navbar() {
     const navigate = useNavigate();
     return (
-        <div
+        <nav
             className={
-                "fixed w-full backdrop-blur-md mt-2 h-20 border-b-2 border-dashed border-white items-center flex divide-dashed"
+                "fixed top-0 w-full bg-transparent backdrop-blur-sm h-24 items-center flex"
             }
         >
-            <div className={"w-full gap-52 justify-between flex mx-52"}>
-                {navbarProperties.map((item) => (
-                    <>
-                        {item.imgSource ? (
-                            <img
-                                className={
-                                    "w-40 mx-auto active:scale-95 cursor-pointer hover:scale-105 transition-all duration-300"
-                                }
-                                src={item.imgSource}
-                                onClick={() => navigate(item.navigate)}
-                                alt={"image"}
-                            />
-                        ) : (
-                            <button
-                                key={"Navbar button key: " + item.id}
-                                onClick={() => navigate(item.navigate)}
-                                className={`w-36 box-border active:scale-95 h-12 tracking-widest hover:border-[5px] border-[3px] text-lg hover:border-pink-600 transition-all duration-300 border-dashed border-white py- px-3 rounded-xl`}
-                            >
-                                <span className={"font-bold"}>
-                                    {item.title?.charAt(0)}
-                                </span>
-                                {item.title?.substring(
-                                    1,
-                                    item.title?.length - 1
-                                )}
-                                <span className={"font-bold"}>
-                                    {item.title?.charAt(item.title?.length - 1)}
-                                </span>
-                            </button>
-                        )}
-                    </>
-                ))}
-            </div>
-        </div>
+            <section className={"mx-10 flex w-full"}>
+                <div className={"justify-start"}>
+                    <img
+                        className={
+                            "w-52 transition-all duration-300 hover:scale-105 cursor-pointer"
+                        }
+                        onClick={() => navigate("/")}
+                        src={Mazca}
+                        alt="Mazca"
+                    />
+                </div>
+                <div className={"flex gap-10 w-full justify-end"}>
+                    {navbarProperties.map((item, index) => (
+                        <button
+                            className={
+                                "hover:text-pink-600 transition-all duration-300 hover:scale-105"
+                            }
+                            key={"buttonKey " + index}
+                            onClick={() => navigate(item.navigate)}
+                        >
+                            {item.title}
+                        </button>
+                    ))}
+                </div>
+            </section>
+        </nav>
     );
 }

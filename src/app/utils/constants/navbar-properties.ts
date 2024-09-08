@@ -1,30 +1,19 @@
 import INavbar from "@interfaces/constants/INavbar.ts";
-import Mazca from "@assets/logos/MAZCA SVG WHITE.svg";
 
 export const navbarProperties: INavbar[] = [
     {
         id: 1,
-        title: "Catálogo",
-        navigate: "/Catalogo"
-    },
-    {
-        id: 2,
-        title: "Novidades",
+        title: "Lançamentos",
         navigate: "/Novidades"
     },
     {
-        id: 3,
-        navigate: "/",
-        imgSource: Mazca
+        id: 2,
+        title: "Coleções",
+        navigate: "/Colecoes"
     },
     {
-        id: 4,
+        id: 3,
         title: "Promoções",
         navigate: "/Promocoes"
-    },
-    {
-        id: 5,
-        title: "Login",
-        navigate: "/Login"
     }
 ];
