@@ -1,56 +1,35 @@
+import { footerProperties } from "@constants/footer-properties.ts";
+import { useNavigate } from "react-router-dom";
+
 export default function Footer() {
+    const navigate = useNavigate();
     return (
         <footer
             className={
-                "w-full absolute bottom-0 backdrop-blur-md flex bg-transparent"
+                "w-full h-52 absolute bottom-0 transition-all overflow-hidden backdrop-blur-md bg-transparent"
             }
         >
             <div className={"w-full mx-10 my-12"}>
-                <section className={"w-full"}>
-                    <div>
+                <section
+                    className={"w-full flex-col justify-end flex items-start"}
+                >
+                    {footerProperties.map((item, index) => (
                         <button
-                            onClick={() =>
-                                console.log(
-                                    "Aparecer um pop-up de e-mail copiado"
-                                )
-                            }
+                            key={"footerButtonKey: " + index}
                             className={
                                 "text-2xl hover:text-pink-600 hover:scale-105 transition-all duration-300"
                             }
+                            onClick={() => {
+                                if (item.navigate) {
+                                    navigate(item.navigate);
+                                } else if (item.action) {
+                                    item.action();
+                                }
+                            }}
                         >
-                            e-mail
+                            {item.title}
                         </button>
-                    </div>
-                    <div>
-                        <button
-                            className={
-                                "text-2xl hover:scale-105 transition-all hover:text-pink-600 duration-300"
-                            }
-                        >
-                            faq
-                        </button>
-                    </div>
-                    <div>
-                        <button
-                            className={
-                                "text-2xl hover:scale-105 transition-all hover:text-pink-600 duration-300"
-                            }
-                        >
-                            instagram
-                        </button>
-                    </div>
-                    <div className={"flex !w-full justify-between"}>
-                        <button
-                            className={
-                                "text-2xl hover:scale-105 transition-all hover:text-pink-600 duration-300"
-                            }
-                        >
-                            x
-                        </button>
-                        <p className={"!text-center text-2xl"}>
-                            todos os direitos reservados para a Mazca Clothing
-                        </p>
-                    </div>
+                    ))}
                 </section>
             </div>
         </footer>

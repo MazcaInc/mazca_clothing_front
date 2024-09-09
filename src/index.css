@@ -9,13 +9,6 @@
     @tailwind utilities;
 }
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 :root {
     font-family: "Kanit", sans-serif;
     font-weight: 400;
@@ -29,6 +22,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <nav
             className={
-                "fixed top-0 w-full bg-transparent backdrop-blur-sm h-24 items-center flex"
+                "fixed transition-all transform duration-300 top-0 w-full bg-transparent backdrop-blur-sm h-24 items-center flex"
             }
         >
             <section className={"mx-10 flex w-full"}>
