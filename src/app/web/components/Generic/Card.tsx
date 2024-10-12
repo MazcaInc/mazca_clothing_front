@@ -16,12 +16,12 @@ export default function Card({
     const [isHovered, setIsHovered] = useState(false);
     const [fade, setFade] = useState(false);
 
-    function handleDelay() {
+    function handleDelay(hover: boolean) {
         setFade(false);
         setTimeout(() => {
             setFade(true);
-            setIsHovered(!isHovered);
-        }, 200);
+            setIsHovered(hover);
+        }, 100);
     }
 
     return (
@@ -39,8 +39,8 @@ export default function Card({
                     src={isHovered ? hoverSrc : src}
                     alt={alt}
                     className={`${classname} ${fade ? "opacity-100 scale-100" : "opacity-95 scale-95"} transition-all transform duration-200`}
-                    onMouseEnter={handleDelay}
-                    onMouseLeave={handleDelay}
+                    onMouseEnter={() => handleDelay(!isHovered)}
+                    onMouseLeave={() => handleDelay(false)}
                 />
             </div>
             <div className={"pt-3"}>

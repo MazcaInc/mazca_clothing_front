@@ -9,8 +9,8 @@ export const footerProperties: IFooter[] = [
             void toast.promise(
                 navigator.clipboard.writeText("mazca.contact@gmail.com"),
                 {
-                    loading: "Copiando texto para a área de transferência...",
-                    success: "Texto copiado para a área de transferência!",
+                    loading: "Copiando e-mail para a área de transferência...",
+                    success: "E-mail copiado para a área de transferência!",
                     error: (error: Error) => error.message
                 },
                 {
@@ -30,7 +30,7 @@ export const footerProperties: IFooter[] = [
         title: "Instagram",
         action: () =>
             window.open(
-                "https://www.instagram.com/MazcaSafada",
+                "https://www.instagram.com/mazca.clothing",
                 "_blank",
                 "noopener,noreferrer"
             )
