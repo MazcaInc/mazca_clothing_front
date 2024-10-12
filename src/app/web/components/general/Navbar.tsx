@@ -22,17 +22,23 @@ export default function Navbar() {
                     />
                 </div>
                 <div className={"flex gap-10 w-full justify-end"}>
-                    {navbarProperties.map((item, index) => (
-                        <button
-                            className={
-                                "hover:text-pink-600 transition-all duration-300 hover:scale-105"
-                            }
-                            key={"buttonKey " + index}
-                            onClick={() => navigate(item.navigate)}
-                        >
-                            {item.title}
-                        </button>
-                    ))}
+                    <ul className={"flex gap-10 list-none p-0"}>
+                        {navbarProperties.map((item, index) => (
+                            <li key={"listKey " + index}>
+                                <button
+                                    className={
+                                        "hover:text-pink-600 transition-all duration-300 hover:scale-105"
+                                    }
+                                    onClick={() => navigate(item.navigate)}
+                                    role="link"
+                                    tabIndex={0}
+                                    aria-label={`Navegar para ${item.title}`}
+                                >
+                                    {item.title}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </section>
         </nav>

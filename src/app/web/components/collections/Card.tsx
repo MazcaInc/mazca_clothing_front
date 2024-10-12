@@ -25,7 +25,7 @@ export default function Card({
     }
 
     return (
-        <div
+        <article
             className={
                 "text-center backdrop-blur-md hover:text-pink-600 hover:-translate-y-0.5 cursor-pointer transition-all duration-300 w-64 justify-center p-4 items-center bg-transparent border-transparent border-2 rounded-2xl hover:border-pink-600"
             }
@@ -38,16 +38,17 @@ export default function Card({
                 <img
                     src={isHovered ? hoverSrc : src}
                     alt={alt}
+                    role="img"
                     className={`${classname} ${fade ? "opacity-100 scale-100" : "opacity-95 scale-95"} transition-all transform duration-200`}
                     onMouseEnter={() => handleDelay(!isHovered)}
                     onMouseLeave={() => handleDelay(false)}
                 />
             </div>
             <div className={"pt-3"}>
-                <p className={"text-2xl"}>Blue</p>
+                <h2 className={"text-2xl"}>Blue</h2> {/* Título do produto */}
                 <p className={"text-md"}>R$ XXX,XX</p>
                 <p className={"text-lg"}>Em estoque</p>
             </div>
-        </div>
+        </article>
     );
 }

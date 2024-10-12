@@ -1,8 +1,8 @@
 import IUser from "@interfaces/IUser";
-import { UserTypeEnum } from "@enums/UserTypeEnum";
+import { UserTypeEnum } from "@enums/auth/UserTypeEnum.ts";
 import { PaymentMethodEnum } from "@enums/user/PaymentMethodEnum";
-import { BrazilianStateEnum } from "@enums/user/BrazilianStateEnum";
-import { CountriesEnum } from "@enums/user/CountriesEnum";
+import { BrazilianStateEnum } from "@enums/auth/brazil/BrazilianStateEnum.ts";
+import { CountriesEnum } from "@enums/auth/international/CountriesEnum.ts";
 import { PixKeyEnum } from "@enums/user/PixKeyEnum";
 
 export const userConstants: IUser[] = [

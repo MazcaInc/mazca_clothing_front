@@ -1,6 +1,6 @@
 import IUser from "./IUser";
-import { BrazilianStateEnum } from "@enums/user/BrazilianStateEnum";
-import { CountriesEnum } from "@enums/user/CountriesEnum";
+import { BrazilianStateEnum } from "@enums/auth/brazil/BrazilianStateEnum.ts";
+import { CountriesEnum } from "@enums/auth/international/CountriesEnum.ts";
 
 export default interface IAddress {
     userID: IUser["userID"];

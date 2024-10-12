@@ -9,7 +9,7 @@ export const navbarProperties: INavbar[] = [
     {
         id: 2,
         title: "Coleções",
-        navigate: "/Colecoes"
+        navigate: "/Collections"
     },
     {
         id: 3,

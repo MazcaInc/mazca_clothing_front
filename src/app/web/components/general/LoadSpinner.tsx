@@ -1,6 +1,10 @@
 export function LoadSpinner() {
     return (
-        <div className="animate-spin">
+        <div
+            role="status"
+            aria-live="polite"
+            className="animate-spin flex justify-center items-center"
+        >
             <svg
                 width="40"
                 height="40"
@@ -8,6 +12,7 @@ export function LoadSpinner() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
+                <title>Carregando...</title>
                 <path
                     d="M158 79.0001C158 89.3745 155.957 99.6474 151.986 109.232C148.016 118.817 142.197 127.526 134.861 134.862L116.524 116.524C121.452 111.597 125.361 105.746 128.028 99.308C130.695 92.8696 132.067 85.969 132.067 79.0001H158Z"
                     fill="white"
