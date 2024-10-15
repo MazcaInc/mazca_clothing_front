@@ -4,7 +4,6 @@ import { lazy, Suspense } from "react";
 import { LoadSpinner } from "@components/general/LoadSpinner.tsx";
 import Footer from "@components/general/Footer.tsx";
 const Home = lazy(() => import("@screens/Home.tsx"));
-const Collections = lazy(() => import("@screens/Collections.tsx"));
 
 export default function AppRoutes() {
     return (
@@ -26,7 +25,6 @@ export default function AppRoutes() {
             >
                 <Routes>
                     <Route path={"/"} element={<Home />} />
-                    <Route path={"/Collections"} element={<Collections />} />
                 </Routes>
             </Suspense>
             <Footer />

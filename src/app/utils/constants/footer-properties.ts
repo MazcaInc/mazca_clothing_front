@@ -23,10 +23,6 @@ export const footerProperties: IFooter[] = [
         }
     },
     {
-        title: "faq",
-        navigate: "/faq"
-    },
-    {
         title: "Instagram",
         action: () =>
             window.open(

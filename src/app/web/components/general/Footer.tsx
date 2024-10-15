@@ -6,10 +6,10 @@ export default function Footer() {
     return (
         <footer
             className={
-                "w-full h-52 absolute bottom-0 transition-all overflow-hidden backdrop-blur-md bg-transparent"
+                "w-full h-32 absolute bottom-0 transition-all overflow-hidden backdrop-blur-md bg-transparent"
             }
         >
-            <div className={"w-full mx-10 my-12"}>
+            <div className={"w-full mx-8 my-12"}>
                 <nav aria-label="Rodapé de navegação">
                     <ul
                         className={
