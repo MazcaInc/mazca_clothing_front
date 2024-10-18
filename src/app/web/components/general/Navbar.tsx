@@ -6,14 +6,14 @@ export default function Navbar() {
     return (
         <nav
             className={
-                "fixed transition-all transform duration-300 top-0 w-full bg-transparent backdrop-blur-sm h-24 items-center flex justify-center"
+                "fixed transition-all transform duration-500 top-0 w-full bg-transparent backdrop-blur-sm h-24 items-center flex justify-center"
             }
         >
             <section className={"mx-10 flex"}>
                 <div className="items-center flex ">
                     <img
                         className={
-                            "w-52 transition-all duration-300 hover:scale-105 cursor-pointer items-center"
+                            "w-52 transition-all duration-500 hover:scale-125 cursor-pointer items-center"
                         }
                         onClick={() => navigate("/")}
                         src={Mazca}

@@ -1,15 +1,18 @@
-// import WhiteOwl from "@assets/logos/white_owl.svg";
-
 export default function Home() {
     return (
-        <div className="h-screen absolute -z-10 overflow-x-hidden flex-col items-center w-full flex">
-            <div
-                className="fixed pointer-events-none -top-72 -z-10 w-[75rem] h-[75rem] bg-no-repeat bg-contain"
-                // style={{ backgroundImage: `url(${WhiteOwl})` }}
-            />
-            <main className="h-full mt-96 text-4xl transition-all duration-300 hover:text-5xl hover:text-pink-600 cursor-default">
-                <h1>Novidades em breve...</h1>
-            </main>
-        </div>
+        <main className="h-screen w-full">
+            <section className="h-full flex-wrap break-words flex text-center justify-center items-center text-4xl">
+                <h1
+                    className={
+                        "flex flex-col transition-all duration-500 hover:scale-125 hover:text-pink-600 cursor-default"
+                    }
+                >
+                    <span className={"text-6xl"}>Site em construção</span>
+                    <span className={"text-4xl mt-2"}>
+                        Novidades em breve...
+                    </span>
+                </h1>
+            </section>
+        </main>
     );
 }
