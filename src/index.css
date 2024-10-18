@@ -17,7 +17,7 @@
     height: 100vh;
     position: relative;
 
-    background-image: url("fundo.png");
+    background-image: url("public/fundo.png");
     background-size: cover;
     background-repeat: no-repeat;
 
