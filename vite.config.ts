@@ -6,7 +6,7 @@ import compression from "vite-plugin-compression";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: "/mazca_clothing_front",
+    base: "/",
     plugins: [
         react({
             devTarget: "es2022"
